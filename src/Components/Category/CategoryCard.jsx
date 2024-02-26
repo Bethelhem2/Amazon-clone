@@ -1,12 +1,13 @@
 import React from 'react'
+import classes from "./category.module.css";
 
 
-function CategoryCard(data) {
+function CategoryCard({data}) {
   return (
-    <div>
+    <div className={classes.Category}>
       <a href="">
         <span>
-          <h2>dssdsd{data.title}</h2>
+          <h2>{data.title}</h2>
         </span>
         <img src={data.imgLink} alt="" />
         <p>shop now</p>
