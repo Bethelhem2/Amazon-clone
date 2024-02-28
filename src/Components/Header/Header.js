@@ -44,11 +44,13 @@ const Header = () => {
           <FaSearch size={25} />
         </div>
 
-        <Link to="" className={classes.language}>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_aCxUas3NJb3nFW5OGvCtd1FjsIgIu3Uvk51NjzVmA&s" />
-          <select name="" id="">
-            <option value="">EN</option>
-          </select>
+        <Link to="">
+          <div className={classes.language}>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_aCxUas3NJb3nFW5OGvCtd1FjsIgIu3Uvk51NjzVmA&s" />
+            <select name="" id="">
+              <option value="">EN</option>
+            </select>
+          </div>
         </Link>
 
         {/* three components */}
