@@ -5,7 +5,7 @@ import classes from './Product.module.css'
 import { Link } from "react-router-dom";
 
 
-function ProductCard({product}) {
+function ProductCard({product, flex}) {
     const {image, title, id, rating, price} = product;
 
 
@@ -18,9 +18,9 @@ function ProductCard({product}) {
         <h3>{title}</h3>
         <div className={classes.rating}>
           {/* rating */}
-          <Rating value={rating.rate} precision={0.1} />
+          <Rating value={rating?.rate} precision={0.1} />
           {/* count */}
-          <small>{rating.count}</small>
+          <small>{rating?.count}</small>
         </div>
         <div>
           {/* price */}
