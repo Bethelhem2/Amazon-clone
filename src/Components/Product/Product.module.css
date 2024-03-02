@@ -39,6 +39,9 @@ button {
     padding: 10px 0px;
     background-color: #C0C0C0;
 }
+.rating Rating {
+    color: #faaf00 !important;
+}
 .products_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
