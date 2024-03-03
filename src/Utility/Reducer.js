@@ -3,7 +3,8 @@ import { Type } from "./actiontype"
 import { avatarClasses } from "@mui/material"
 
 export const initialState = {
-    basket:[]
+    basket:[],
+    user:null
 }
 
 export const reducer = (state, action) => {
@@ -37,6 +38,12 @@ export const reducer = (state, action) => {
                 return {
                     ...state,
                     basket:newBasket
+                }
+
+            case Type.SET_USER:
+                return {
+                    ...state,
+                    user:action.user
                 }
              
 

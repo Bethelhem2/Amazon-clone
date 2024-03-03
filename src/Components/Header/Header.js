@@ -6,9 +6,10 @@ import { LuShoppingCart } from "react-icons/lu";
 import classes from './Header.module.css'
 import LowerHeader from './LowerHeader'
 import { DataContext } from '../DataProvider/DataProvider';
+import { auth } from '../../Utility/firebase';
 
 const Header = () => {
-    const [{basket},dispatch]=useContext(DataContext)
+    const [{user, basket},dispatch]=useContext(DataContext)
     const totalItem = basket?.reduce((amount,item)=> {
       return item.amount + amount;
     },0)
@@ -43,12 +44,13 @@ const Header = () => {
             <option value="">All</option>
           </select>
           <input type="text" name="" id="" placeholder="Search Amazon" />
-          <FaSearch size={25} />
+          <FaSearch size={38.5} />
         </div>
 
         <Link to="">
           <div className={classes.language}>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_aCxUas3NJb3nFW5OGvCtd1FjsIgIu3Uvk51NjzVmA&s" />
+            <img src="  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_aCxUas3NJb3nFW5OGvCtd1FjsIgIu3Uvk51NjzVmA&s" />
+
             <select name="" id="">
               <option value="">EN</option>
             </select>
@@ -56,10 +58,19 @@ const Header = () => {
         </Link>
 
         {/* three components */}
-        <Link to="/auth">
+        <Link to={!user && "/auth"}>
           <div>
-            <p>Hello, sign in</p>
-            <span>Account & Lists</span>
+              {user ? (
+                <>
+                  <p>Hello {user?.email?.split("@")[0]}</p>
+                  <span onClick={()=>auth.signOut()}>Sign Out</span>
+                </>
+              ) : (
+                <>
+                  <p>Hello, Sign in</p>
+                  <span>Account & Lists</span>
+                </>
+              )}
           </div>
         </Link>
         {/* orders */}
