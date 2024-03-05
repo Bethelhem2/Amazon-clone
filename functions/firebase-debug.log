@@ -4278,3 +4278,45 @@ SyntaxError: missing ) after argument list
 [debug] [2024-03-04T23:17:16.873Z] Could not find functions.yaml. Must use http discovery
 [debug] [2024-03-04T23:17:16.882Z] Found firebase-functions binary at 'C:\Users\dell\Desktop\evangadi\phase_four\AMAZON\amazon-clone\functions\node_modules\.bin\firebase-functions'
 [debug] [2024-03-04T23:17:16.897Z] File C:\Users\dell\Desktop\evangadi\phase_four\AMAZON\amazon-clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\dell\\Desktop\\evangadi\\phase_four\\AMAZON\\amazon-clone\\functions\\index.js changed, reloading triggers"}}
+[info] Serving at port 8321
+
+[debug] [2024-03-04T23:17:17.899Z] Validating nodejs source
+[debug] [2024-03-04T23:17:21.119Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "stripe": "^14.19.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-03-04T23:17:21.119Z] Building nodejs source
+[debug] [2024-03-04T23:17:21.120Z] Failed to find version of module node: reached end of search path C:\Users\dell\Desktop\evangadi\phase_four\AMAZON\amazon-clone\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-03-04T23:17:21.124Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-03-04T23:17:21.127Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-03-04T23:17:21.140Z] Found firebase-functions binary at 'C:\Users\dell\Desktop\evangadi\phase_four\AMAZON\amazon-clone\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8106
+
+[debug] [2024-03-04T23:17:22.248Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}

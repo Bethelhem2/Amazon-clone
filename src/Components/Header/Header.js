@@ -59,24 +59,26 @@ const Header = () => {
 
         {/* three components */}
         <Link to={!user && "/auth"}>
-          <div>
-              {user ? (
-                <>
-                  <p>Hello {user?.email?.split("@")[0]}</p>
-                  <span onClick={()=>auth.signOut()}>Sign Out</span>
-                </>
-              ) : (
-                <>
-                  <p>Hello, Sign in</p>
-                  <span>Account & Lists</span>
-                </>
-              )}
+          <div className={classes.sign__in__out}>
+            {user ? (
+              <>
+                <p>Hello {user?.email?.split("@")[0]}</p>
+                <span onClick={() => auth.signOut()}>Sign Out</span>
+              </>
+            ) : (
+              <>
+                <p>Hello, Sign in</p>
+                <span>Account & Lists</span>
+              </>
+            )}
           </div>
         </Link>
         {/* orders */}
         <Link to="/orders">
-          <p>returns</p>
-          <span>& Orders</span>
+          <div className={classes.orders}>
+            <p>returns</p>
+            <span>& Orders</span>
+          </div>
         </Link>
         {/* cart */}
         <Link to="/cart" className={classes.cart}>
