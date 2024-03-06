@@ -52,8 +52,8 @@
     height: 30px;
     margin-top: 10px;
     cursor: pointer;
-    display: block !important;
-    position: relative !important;
+    /* display: block !important;
+    position: relative !important; */
 }
 .login__signInButton:hover {
     background-color: var(--primary-shade);

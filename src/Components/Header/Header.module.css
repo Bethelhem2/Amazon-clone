@@ -77,12 +77,12 @@
 .search:focus-within {
   border: 2px solid rgb(235, 161, 173);
 }
-.sign__in__out p, span {
+.sign__in__out p, .sign__in__out span {
   color: white;
 }
-.orders p, span {
+/* .orders p, span {
   color: white;
-}
+} */
 .order__container {
   display: flex;
   align-items: center;
@@ -90,12 +90,16 @@
   max-width: 450px;
   gap: 10px;
 }
+.orders, .orders p {
+  color: white;
+}
 .order__container a {
   text-decoration: none;
   color: white;
 }
 .order__container p {
   font-size: 10px;
+
 }
 /* p,
 span {
@@ -145,6 +149,9 @@ a:hover {
   display: flex;
   list-style: none;
   gap: 5px;
+}
+.lower__container p {
+  color: white;
 }
 .lower__container ul li {
   padding: 8px;

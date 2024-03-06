@@ -19,6 +19,10 @@
   gap: 5px;
   color: black;
 }
+.btn_container button {
+  display: block;
+  position: relative;
+}
 .btn_container span {
   color: black;
 }

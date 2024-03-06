@@ -15,7 +15,7 @@
     height: 260px;
     object-fit: contain;
 }
-button {
+.button {
     display: none;
     padding: 5px 10px;
     font-weight: 700;
@@ -37,7 +37,6 @@ button {
     display: flex;
     align-items: center;
     padding: 10px 0px;
-    background-color: #C0C0C0;
 }
 .rating Rating {
     color: #faaf00 !important;

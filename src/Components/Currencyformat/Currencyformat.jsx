@@ -7,4 +7,4 @@ const CurrencyFormat = ({amount}) => {
     return <div>{formattedAmount}</div>
 }
 
-export default CurrencyFormat
+export default CurrencyFormat;
