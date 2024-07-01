@@ -29,8 +29,12 @@
 }
 .category__container {
     position: relative;
-    margin-top: -80px;
+    margin-top: -10%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-width: 1600px;
+    gap: 50px;
     place-items: center;
+    margin-right: auto;
+    margin-left: auto;
 }

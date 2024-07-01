@@ -47,15 +47,17 @@ function Auth() {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userInfo) => {
           dispatch({
-            type: Type.SET_USER,
+            type: Type.SET_USER, 
             user: userInfo.user,
           });
-          setLoading({ ...loading, signup: false });
+          setLoading({ ...loading, signUp: false });
           navigate(navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           setError(err.message);
-          setLoading({ ...loading, signup: false });
+          setLoading({ ...loading, signUp: false });
+
+
         });
     }
   };
